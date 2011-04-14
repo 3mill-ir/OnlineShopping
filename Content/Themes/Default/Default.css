@@ -1,0 +1,1303 @@
+﻿body 
+{
+	direction : rtl;
+	/*background-image : url(bg.png);*/
+	background-position : top;
+	background-repeat : repeat-x;
+	font-family : Tahoma;
+	font-size : 8pt;
+}
+.MainDiv
+{
+	width : 950px;
+	margin-right : auto;
+	margin-left : auto;
+}
+.HeaderDiv
+{
+	
+	padding : 5px 0px 5px 0px;
+	position : relative;
+}
+.Title
+{
+	width : 500px;
+	height : 75px;
+	background-image : url(Title.png);
+	display : inline-block;
+	margin-top : 15px;
+}
+#SearchDiv
+{
+	background-color : #f1f2f2;
+	border : solid 1px #d1d3d4;
+	padding : 5px 15px 5px 15px;
+}
+#SearchDiv a:hover
+{
+	text-decoration : underline;
+}
+.ContentMainDiv
+{
+	border : solid 1px #d1d3d4;
+	margin : 10px 10px 10px 0px;
+}
+.Bars
+{
+	border : solid 1px #d1d3d4;
+}
+.TextBoxes
+{
+	padding : 6px;
+	font-family : Tahoma;
+	font-size : 8pt;
+	font-weight : normal;
+	border  :solid 1px #939598;
+}
+.ComboBoxes
+{
+	padding : 5px;
+	font-family : Tahoma;
+	font-size : 8pt;
+	font-weight : normal;
+	border  :solid 1px #939598;
+}
+.SearchButton
+{
+	width : 65px;
+	height : 25px;
+	display: inline-block;
+	background-image : url('SearchButton.png');
+	margin-top: 0px;
+}
+.ContentPlace
+{
+}
+#Footer
+{
+	border-top : solid 1px #d1d3d4;
+	padding-top : 10px;
+	text-align : center;
+	color : #5b748d;
+}
+.Footer
+{
+	border-top : solid 1px #d1d3d4;
+	padding-top : 10px;
+	text-align : center;
+	color : #5b748d;
+}
+#Footer a:hover
+{
+	text-decoration : underline;
+}
+.RamanLink
+{
+	text-decoration : none;
+	color : #5b748d;
+}
+.Link
+{
+	color : #146eb4;
+	text-decoration : none;
+	cursor : pointer;
+	te
+}
+.RightBarMenuTD
+{
+	width : 220px;
+}
+#MenuDiv
+{
+	background-color : #d1d3d4;
+	padding : 2px 2px 1px 2px;
+	margin : 10px 0px 10px 0px;
+	display : inline-block;
+	width : 216px;
+}
+.LeftPart
+{
+	max-width : 730px;
+}
+.MenuItem
+{
+	background-color : #f3f3f3;
+	margin-bottom : 1px;
+	color : #333333;
+	text-align : center;
+	display : block;
+	cursor : pointer;
+	text-decoration : none;
+	height : 22px;
+	padding : 8px 0px 0px 0px;
+	font-weight : bold;
+}
+.Bold
+{
+	font-weight : bold;
+}
+.MenuItemArrow
+{
+	background-image : url(MenuArrow.png);
+	background-position : left;
+	background-repeat : no-repeat;
+}
+.SubMenuItem
+{
+	border : solid 1px #dcddde;
+	color : #dcddde;
+	text-align : right;
+	display : block;
+	cursor : pointer;
+	text-decoration : none;
+	height : 22px;
+	padding :8px 10px 0px 10px;
+	font-weight : bold;
+	margin : 0px 10px 0px 10px;
+}
+.MenuDiv_Hover
+{
+	color : White;
+	background-color : #04406a;
+}
+.MenuItemArrow_Hover
+{
+	background-image : url(MenuArrow_Hover.png);
+	background-position : left;
+	background-repeat : no-repeat;
+}
+.PopupMenu
+{
+	background-color : #04406a;
+	display : none;
+	position : absolute;
+	color : White;
+	z-index : 1000;
+}
+#PopupMenu a:hover
+{
+	text-decoration : underline;
+}
+.SignInDiv
+{
+	position : absolute;
+	left : 0px;
+	bottom : 7px;
+	color : #939598;
+}
+.TopMenu
+{
+	background-color : #f8f8f8;
+	border-bottom : solid 1px #dcddde;
+	border-right : solid 1px #dcddde;
+	border-left : solid 1px #dcddde;
+	position : absolute;
+	top : -8px;
+	left : 0px;
+	width : 100%;
+	height : 27px;
+}
+.TopMenuItem
+{
+	height : 20px;
+	padding-top : 7px;
+	color : #146eb4;
+	text-decoration : none;
+	cursor : pointer;
+	font-weight : bold;
+	display : inline-block;
+	padding-right : 10px;
+	padding-left : 10px;
+}
+.TopMenu_SubItem
+{
+	height : 20px;
+	padding-top : 7px;
+	color : #146eb4;
+	text-decoration : none;
+	cursor : pointer;
+	display : block;
+	padding-right : 10px;
+	padding-left : 10px;
+	margin : 2px;
+	text-align : center;
+	border : solid 1px #dcddde;
+}
+.TopMenuItem_Arrow
+{
+	width : 10px;
+	height : 10px;
+	background-image : url(TopMenuItem_Arrow.png);
+}
+.TopMenuLinksTable
+{
+	position : absolute;
+	left : 0px;
+	bottom : 0px;
+}
+.TopMenu_PopupDiv
+{
+	display : none; 
+	position : absolute; 
+	background-color : #f8f8f8; 
+	width : 170px; 
+	padding : 5px;
+	border-right : solid 1px #dcddde;
+	border-left : solid 1px #dcddde;
+	border-bottom : solid 1px #dcddde;
+	z-index : 500;
+}
+.TopMenu a:hover
+{
+	background-color : #ededee;
+}
+.Separator
+{
+	border-left : solid 1px #d8d9da;
+}
+.First
+{
+	border-right : solid 1px #d8d9da;
+}
+.TopMenuTD
+{
+	/*padding : 0px 10px 0px 10px;*/
+}
+.ListTitle
+{
+	background-color : #ededee;
+	border : solid 1px #d8d9da;
+	padding : 10px 15px 10px 15px;
+	color : #333132;
+}
+.ListContent
+{
+	border-left : solid 1px #d8d9da;
+	border-right : solid 1px #d8d9da;
+	border-bottom : solid 1px #d8d9da;
+	padding : 10px 15px 10px 15px;
+}
+.PageTitle
+{
+	height: 30px;
+	background-position : top right;
+	background-repeat : no-repeat;
+}
+.Title_Materials
+{
+	background-image : url(Title_Materials.png);
+}
+.DataListItem
+{
+	padding : 2px;
+	background-color : #d4effc;
+	border : solid 1px #a0c9ec;
+	height : 30px;
+}
+.DataListSubItem
+{
+	text-align : center;
+	background-color : #e2f3f9;
+	padding : 5px 0px 5px 0px;
+}
+.DeleteSmallButton
+{
+	background-image : url(DeleteSmallButton.png);
+	width : 12px;
+	height : 12px;
+	display : inline-block;
+}
+.Edit
+{
+	width : 20px;
+	height : 20px;
+	background-image : url(Edit.png);
+	display : inline-block;
+	cursor : pointer;
+}
+.SubTitle
+{
+	height : 25px;
+	background-position : center;
+	background-repeat : no-repeat;
+}
+.SubTitle_Categories
+{
+	background-image : url(SubTitle_Categories.png);
+}
+.SubTitle_Sets
+{
+	background-image : url(SubTitle_Sets.png);
+}
+.SubTitle_Materials
+{
+	background-image : url(SubTitle_Materials.png);
+}
+.Title_NewMaterial
+{
+	background-image : url(Title_NewMaterial.png);
+}
+.AddButton
+{
+	width : 20px;
+	height : 20px;
+	background-image : url(add.png);
+	display : inline-block;
+	background-repeat : no-repeat;
+}
+.LoadingCircle
+{
+	background-image : url(Loading_Circle.gif);
+	width :16px;
+	height : 16px;
+	display : inline-block;
+}
+.Loading_Circle_2
+{
+	background-image : url(Loading_Circle_2.gif);
+	width :16px;
+	height : 16px;
+}
+.Loading_Line
+{
+	background-image : url(Loading_Line.gif);
+	width :43px;
+	height : 11px;
+}
+.SmallGray
+{
+	font-size : 7pt;
+	color : Gray;
+}
+.KeywordsItem
+{
+	background-color : #fdc578;
+	color : #000000;
+	text-align : right;
+	padding : 5px 10px 5px 10px;
+	border : solid 1px #ca6c18;
+	margin : 0px 0px 3px 3px;
+}
+.ProfileItemDelete
+{
+	display : inline-block;
+	width : 10px;
+	height : 10px;
+	background-image : url(profileItemDelete.png);
+	margin-top : 3px;
+}
+.Centerize
+{
+	margin-right : auto;
+	margin-left : auto;
+}
+.Buttons
+{
+	padding : 5px 0px 5px 0px;
+	text-align : center;
+	font-family : Tahoma;
+	font-size : 8pt;
+	font-weight : bold;
+}
+.Uploader
+{
+	padding : 4px 8px 4px 8px;
+	background-color : #d5e9f2;
+	border : solid 1px #75bee9;
+}
+.LargeImage
+{
+	padding : 7px;
+	background-color : White;
+	border : solid 1px #bcbec0
+}
+.Image
+{
+	padding : 3px;
+	background-color : White;
+	border : solid 1px #bcbec0
+}
+.SmallThumbnail
+{
+	padding : 1px;
+	background-color : White;
+	border : solid 1px #bcbec0
+}
+.AvatarImage
+{
+	padding : 3px;
+	background-color : #00ff2a;
+	border : solid 1px #bcbec0
+}
+.SmallImage
+{
+	padding : 1px;
+	background-color : White;
+	border : solid 1px #bcbec0
+}
+.ImagesDataListItem
+{
+	padding : 10px;
+}
+.MaterialInfoDiv
+{
+	display : none;
+	position : absolute;
+	background-color : White;
+	border : solid 2px #bcbec0;
+	padding : 5px;
+	width : 200px;
+}
+#JustForLinkHover
+{
+	text-decoration : underline;
+}
+.Title_EditMaterial
+{
+	height : 30px;
+	background-repeat : no-repeat;
+	background-image : url(Title_EditMaterial.png);
+	background-position : top right;
+}
+.Avatar
+{
+	width : 20px;
+	height : 20px;
+	background-image : url(Avatar.png);
+	display : inline-block;
+}
+.Title_NewCategory
+{
+	height : 30px;
+	background-image : url(Title_NewCategory.png);
+	background-position : top right;
+	background-repeat : no-repeat;
+}
+.Title_EditCategory
+{
+	height : 30px;
+	background-image : url(Title_EditCategory.png);
+	background-position : top right;
+	background-repeat : no-repeat;
+}
+.Title_NewSet
+{
+	height : 30px;
+	background-image : url(Title_NewSet.png);
+	background-position : top right;
+	background-repeat : no-repeat;
+}
+.AddToCart
+{
+	width : 26px;
+	height : 22px;
+	background-image : url(AddToCart.png);
+	display : inline-block;
+	cursor : pointer;
+}
+.SliderNext
+{
+	background-image : url(Next.png);
+}
+.SliderPrevious
+{
+	background-image : url(Previous.png);
+}
+.DataListPaging
+{
+	background-image : url(GradiantBackRepeat.png);
+	background-repeat : repeat-x;
+	height : 18px;
+	padding : 7px;
+	position : relative;
+}
+.Paging_Previous
+{
+	width : 35px;
+	height :18px;
+	display : inline-block;
+	background-image : url('Paging_Previous.png');
+}
+.Paging_Next
+{
+	width : 35px;
+	height :18px;
+	display : inline-block;
+	background-image : url(Paging_Next.png);
+}
+.EmptyList
+{
+	border : solid 1px #030000;
+	background-color : #ffd27a;
+	color : #030000;
+	padding : 13px 45px 10px 10px;
+	height : 17px;
+	background-image : url(Caution.png);
+	background-repeat : no-repeat;
+	background-position : right center;
+	font-weight : bold;
+}
+.PageTitleRepeat
+{
+	height : 30px;
+	background-image : url(Title_Back.png);
+	background-repeat : repeat-x;
+	color : White;
+	font-weight : bold;
+	padding-right : 10px;
+}
+.Title_Back_Dom
+{
+	background-image : url(Title_Back_Dom.png);
+	height : 30px;
+	width : 100px;
+	background-repeat : no-repeat;
+	background-position : top right;
+}
+.Go
+{
+	width : 50px;
+	height : 25px;
+	display : inline-block;
+	background-image : url(Go.png);
+}
+.GalleryThumbnails
+{
+	background-color : #ededee;
+	border : solid 1px #d8d9da;
+	padding : 5px 10px 2px 10px;
+	color : #333132;
+}
+.ThumbnailsPositionInGallery
+{
+	margin : 1px;
+}
+.GalleryShowingPicDiv
+{
+	border-right : solid 1px #d8d9da;
+	border-left : solid 1px #d8d9da;
+	border-bottom : solid 1px #d8d9da;
+	min-height : 300px;
+	position : relative;
+}
+.GallerySelectedThumbnail
+{
+	background-color : #30475b;
+	padding : 7px 7px 7px 7px;
+}
+.GallerySelectedThumbniailImage
+{
+	cursor : default;
+}
+.GalleryImageContainer
+{
+	padding : 5px;
+	background-color : White;
+	border : solid 1px #bcbec0;
+}
+.GallerySelectedBottom
+{
+	width : 30px;
+	height : 10px;
+	background-image : url(GallerySelectedBottom.png);
+	margin-right : auto;
+	margin-left : auto;
+}
+.GalleryThumbnailContainter
+{
+	padding : 7px 3px 7px 3px;
+}
+.ProgressBack
+{
+	position : absolute;
+	width : 100%;
+	height : 100%;
+	top : 0px;
+	left : 0px;
+	background-color : Black;
+	opacity : 0.6;
+	filter:alpha(opacity=60);
+}
+.ProgressLoading
+{
+	margin-right : auto;
+	margin-left : auto;
+	margin-top : 100px;
+	width : 200px;
+	height : 50px;
+	border : solid 1px #231f20;
+	background-image : url(ProgressBack.png);
+	color : #231f20;
+	z-index : 1001;
+}
+.Cadr
+{
+	border : solid 1px #bcbec0;
+	padding :10px 15px 10px 15px;
+}
+.Vote
+{
+	border : solid 1px #d1d3d4;
+	background-color : #e6e7e8;
+}
+.Yes
+{
+	display : inline-block;
+	width : 30px;
+	height : 20px;
+	background-image : url(Yes.png);
+}
+.No
+{
+	display : inline-block;
+	width : 30px;
+	height : 20px;
+	background-image : url(No.png);
+}
+.VoteCounts
+{
+	padding : 0px 5px 0px 5px;
+}
+.VotesCountDiv
+{
+	background-color : #e6e7e8;
+	height : 20px;
+	padding : 4px 5px 0px 5px;
+	
+}
+.VotesCountLabel
+{
+	color : #414042;
+	font-size : 12pt;
+	font-weight : bold;
+	font-family : Verdana;
+}
+.AddToCartBig
+{
+	width : 100px;
+	height : 40px;
+	background-image : url(AddToCartBig.png);
+	display : inline-block;
+}
+.AddToCompare
+{
+	width : 100px;
+	height : 40px;
+	background-image : url(AddToCompare.png);
+	display : inline-block;
+}
+.Title_ShoppingCart
+{
+	height : 50px;
+	background-image : url(Title_ShoppingCart.png);
+	background-position : top right;
+	background-repeat : no-repeat;
+}
+.CartGridFoot
+{
+	height : 32px;
+	background-color : #354b5e;
+	color : White;
+	border-right : solid 1px #051725;
+	border-left : solid 1px #051725;
+	border-bottom : solid 1px #051725;
+	font-weight : bold;
+}
+.Grid
+{
+	border : solid 1px #051725;
+}
+.GridItem
+{
+	text-align : center;
+	height : 25px;
+	background-color : #f1f2f2;
+	border-bottom : dashed 1px #bcbec0;
+	border-left : dashed 1px #bcbec0;
+}
+.GridHeader
+{
+	background-color : #354b5e;
+	color : White;
+	height : 30px;
+}
+.Grid2
+{
+	border : solid 1px #bcbec0;
+}
+.GridItem2
+{
+	text-align : center;
+	height : 25px;
+	background-color : #f8f8f8;
+	border-bottom : dashed 1px #e6e7e8;
+	border-left : dashed 1px #e6e7e8;
+	height : 30px;
+}
+.GridHeader2
+{
+	background-color : #dcddde;
+	color : #231f1f;
+	height : 30px;
+}
+.CenterText
+{
+	text-align : center;
+}
+.OkeyCart
+{
+	width : 75px;
+	height : 25px;
+	display : inline-block;
+	background-image : url(OkeyCart.png);
+}
+.ViewCart
+{
+	width : 85px;
+	height : 25px;
+	background-image : url(ViewCart.png);
+	display : inline-block;
+}
+.Title_Shops
+{
+	height : 30px;
+	background-image : url(Title_Shops.png);
+	background-repeat : no-repeat;
+	background-position : top right;
+}
+.Title_NewShop
+{
+	height : 30px;
+	background-image : url(Title_NewShop.png);
+	background-repeat : no-repeat;
+	background-position : top right;
+}
+.Title_EditShop
+{
+	height : 30px;
+	background-image : url(Title_EditShop.png);
+	background-repeat : no-repeat;
+	background-position : top right;
+}
+.TopDashed
+{
+	border-top : dashed 1px #a7a9ac;
+}
+.DirectionLTR
+{
+	direction : ltr;
+}
+.NextStep
+{
+	width : 75px;
+	height : 25px;
+	background-image : url(NextStep.png);
+	display : inline-block;
+}
+.PartSeparator
+{
+	border-top : dashed 1px #2e4559;
+}
+.Check
+{
+	width : 60px;
+	height : 25px;
+	background-image : url(Check.png);
+	display : inline-block;
+}
+.MemberInfo
+{
+	border-top : solid 1px #a7a9ac;
+	border-right : solid 1px #a7a9ac;
+	border-left : solid 1px #a7a9ac;
+}
+.MemberInfo_RightTD
+{
+	width : 120px;
+	background-color : #e6e7e8;
+	color : #2e4559;
+	padding : 10px;
+	border-bottom : solid 1px #a7a9ac;
+	border-left : solid 1px #a7a9ac;
+}
+.MemberInfo_LeftTD
+{
+	background-color : #f3f4f4;
+	color : #414042;
+	padding : 10px;
+	font-weight : bold;
+	border-bottom : solid 1px #a7a9ac;
+}
+.CartInfo_Header
+{
+	text-align : center;
+	background-color : #e6e7e8;
+	color : #2e4559;
+	padding : 10px;
+	border-bottom : solid 1px #a7a9ac;
+	border-left : solid 1px #a7a9ac;
+}
+.CartInfo
+{
+	border-top : solid 1px #a7a9ac;
+	border-right : solid 1px #a7a9ac;
+	border-left : solid 1px #a7a9ac;
+}
+.CartInfo_Item
+{
+	background-color : White;
+	color : #414042;
+	padding : 10px;
+	border-bottom : solid 1px #a7a9ac;
+	border-left : solid 1px #a7a9ac;
+	text-align : center;
+}
+.CartInfo_Total
+{
+	background-color : #e6e7e8;
+	text-align : left;
+	padding : 5px 0px 5px 20px;
+	color : #2e4559;
+	font-weight : bold;
+	border-bottom : solid 1px #a7a9ac;
+}
+.Title_ShoppingCartFinal
+{
+	height : 40px;
+	background-image : url(Title_ShoppingCartFinal.png);
+	background-position : top right;
+	background-repeat : no-repeat;
+}
+.TextArea
+{
+	line-height : 20px;
+}
+.SaveShoppingCart
+{
+	height : 25px;
+	width : 100px;
+	display : inline-block;
+	background-image : url(SaveShoppingCart.png);
+}
+.CartSuccessfullySaved
+{
+	height : 45px;
+	background-image : url(CartSuccessfullySaved.png);
+	background-repeat : no-repeat;
+	background-position : top right;
+}
+.Refresh
+{
+	width : 22px;
+	height : 22px;
+	display : inline-block;
+	background-image : url(Refresh.png);
+}
+.CompareTable
+{
+	background-color : White;
+	border : solid 1px #b1b3b6;
+}
+.CompareTable_TopHeaderTD
+{
+	background-color : #e6e7e8;
+	padding : 10px 0px 10px 0px;
+	border-left : solid 1px #d1d3d4;
+	border-bottom : solid 1px #d1d3d4;
+}
+.CompareTable_RightHeaderTD
+{
+	width : 128px;
+	background-color : #e6e7e8;
+	height : 25px;
+	color : #011424;
+	padding : 10px;
+	border-left : solid 1px #d1d3d4;
+	border-bottom : solid 1px #d1d3d4;
+}
+.CompareTable_TopRightHeaderTD
+{
+	background-color : #f3f4f4;
+	border-left : solid 1px #d1d3d4;
+	border-bottom : solid 1px #d1d3d4;
+}
+.CompareTable_ValueCell
+{
+	background-color : #f3f4f4;
+	border-left : solid 1px #d1d3d4;
+	border-bottom : solid 1px #d1d3d4;
+	line-height : 25px;
+	color : #011424;
+	padding : 5px 10px 5px 10px;
+}
+.True
+{
+	width : 20px;
+	height : 20px;
+	display : inline-block;
+	background-image : url(True.png);
+}
+.False
+{
+	width : 20px;
+	height : 20px;
+	display : inline-block;
+	background-image : url(False.png);
+}
+#CompareTable a:hover
+{
+	text-decoration : underline;
+}
+.ViewCompareCart
+{
+	width : 75px;
+	height : 25px;
+	display : inline-block;
+	background-image : url(ViewCompareCart.png);
+}
+.CompareTable_AddToCart
+{
+	width : 75px;
+	height : 30px;
+	display : inline-block;
+	background-image : url(CompareTable_AddToCart.png);
+}
+.Info
+{
+	padding : 10px;
+	background-color : #f8f8f8;
+	border : solid 1px #bcbec0;
+	position : relative;
+}
+.TickBoxInfo
+{
+	background-color : #f8f8f8;
+	border : solid 1px #bcbec0;
+}
+.Subject
+{
+	height : 23px;
+	background-image : url(GradiantBackRepeat.png);
+	background-repeat : repeat-x;
+	color : #f3f4f4;
+	text-align : center;
+	padding-top : 7px;
+}
+.AddToCompare_Small
+{
+	width : 26px;
+	height : 22px;
+	display : inline-block;
+	background-image : url(AddToCompare_Small.png);
+}
+.Likes_Top
+{
+	width : 35px;
+	height : 22px;
+	background-image : url(Likes_Top.png);
+}
+.Likes_Bottom
+{
+	width : 35px;
+	height : 3px;
+	background-image : url(Likes_Bottom.png);
+}
+.Likes_Count
+{
+	background-color : White;
+	border-right : solid 1px #39b600;
+	border-left : solid 1px #39b600;
+	font-weight : bold;
+	color : #2c973e;
+	text-align : center;
+}
+.Likes_Back
+{
+	padding-top : 8px;
+	width : 30px;
+	height : 22px;
+	background-image : url(Likes_Back.png);
+	font-weight : bold;
+	color : #00881a;
+	text-align : center;
+	font-size : 9pt;
+}
+.Tick
+{
+	width : 20px;
+	height : 15px;
+	background-image : url(Tick.png);
+}
+.Tick_Orange
+{
+	width : 20px;
+	height : 15px;
+	background-image : url(Tick_Orange.png);
+}
+.Zarbdar
+{
+	width : 15px;
+	height : 15px;
+	background-image : url(Zarbdar.png);
+}
+.Posted
+{
+	width : 32px;
+	height : 20px;
+	background-image : url(Posted.png);
+}
+.Back
+{
+	width : 20px;
+	height : 20px;
+	background-image : url(Back.png);
+}
+.GridPagerBack
+{
+	background-color : #dcddde;
+	height : 30px;
+}
+.GridPager_LinksContainerTable
+{
+	margin-right : auto;
+	margin-left : auto;
+}
+.GridPager_SelectedLink
+{
+	background-color : #2f465b;
+	display : inline-block;
+	width : 25px;
+	height : 17px;
+	color : White;
+	font-family : Tahoma;
+	font-size : 8pt;
+	font-weight : bold;
+	text-align : center;
+	padding-top : 3px;
+}
+.GridPager_Links
+{
+	background-color : #a7a9ac;
+	display : inline-block;
+	width : 25px;
+	height : 17px;
+	color : White;
+	font-family : Tahoma;
+	font-size : 8pt;
+	font-weight : bold;
+	text-align : center;
+	text-decoration : none;
+	padding-top : 3px;
+}
+.ButtonLink
+{
+	display : block;
+	font-weight : bold;
+	height : 20px;
+	text-align : center;
+	background-color : #ededee;
+	color : #2f465b;
+	border : solid 1px #c7c8c9;
+	padding-top : 5px;
+	text-decoration : none;
+	cursor : pointer;
+}
+.CurrentPrice
+{
+	color : #008c44;
+	font-weight : bold;
+	font-size : 8pt;
+}
+.LineThrough
+{
+	text-decoration : line-through; 
+	color : #b11116;
+}
+.OldPrice
+{
+	color : #939598; 
+	font-weight : normal; 
+	font-size : 11px;
+}
+.LineThroughButton
+{
+	background-image : url(LineThrough.png);
+	height : 12px;
+	width : 12px;
+	display : inline-block;
+}
+.HighLight
+{
+	padding : 7px 10px 7px 10px;
+	background-color : #e1f4fd;
+	border : solid 1px #7bafde;
+	color : #00517d;
+	font-weight : bold;
+}
+.SendMessage
+{
+	width : 65px;
+	height : 25px;
+	display : inline-block;
+	background-image : url(SendMessage.png);
+}
+.SaveChanges
+{
+	width : 85px;
+	height : 25px;
+	display : inline-block;
+	background-image : url(SaveChanges.png);
+}
+.Treasure
+{
+	width : 110px;
+	height : 120px;
+	background-image : url(Treasure.png);
+}
+.Treasure_Arrow
+{
+	width : 20px;
+	height : 20px;
+	background-image : url(Treasure_Arrow.png);
+}
+.Treasure_Percent_Container
+{
+	width : 100px;
+	height : 6px;
+	background-color : White;
+	border-top : solid 1px #bcbec0;
+	border-right : solid 1px #bcbec0;
+	border-bottom : solid 1px #bcbec0;
+	padding : 2px 2px 2px 0px;
+}
+.Treasure_Progress
+{
+	background-color : #00d71b;
+	height : 6px;
+}
+.NameValue_Name
+{
+	height : 30px;
+	border-bottom : dashed 1px #bcbec0;
+}
+.NameValue_Value
+{
+	height : 30px;
+	border-bottom : dashed 1px #bcbec0;
+}
+.FirstPageTitle_AboutUs
+{
+	height : 25px;
+	background-image : url(FirstPageTitle_AboutUs.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.Statement
+{
+	line-height : 28px;
+	text-align : justify;
+}
+.FirstPageTitle_HowToBuy
+{
+	height : 25px;
+	background-image : url(FirstPageTitle_HowToBuy.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.FirstPageTitle_Why
+{
+	height : 25px;
+	background-image : url(FirstPageTitle_Why.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.FirstPageTitle_InviteShops
+{
+	height : 25px;
+	background-image : url(FirstPageTitle_InviteShops.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.FirstPageTitle_NewMaterials
+{
+	height : 25px;
+	background-image : url(FirstPageTitle_NewMaterials.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.FirstPageTitle_RandomMaterials
+{
+	height : 25px;
+	background-image : url(FirstPageTitle_RandomMaterials.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.FirstPageTitle_Populars
+{
+	height : 170px;
+	width : 25px;
+	background-image : url(FirstPageTitle_Populars.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.HiddenKeywords
+{
+	color : White;
+	z-index : -10000;
+	position : absolute;
+	top : 0px;
+	left : 0px;
+}
+.FirstPageTitle_Suggestions
+{
+	height : 170px;
+	width : 25px;
+	background-image : url(FirstPageTitle_Suggestions.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.InnerTitle_Links
+{
+	height : 25px;
+	background-image : url(InnerTitle_Links.png);
+	background-position : right;
+	background-repeat : no-repeat;
+}
+.MarketsBG
+{
+	width : 688px;
+	height : 694px;
+	position : relative;
+	background-image : url(MarketsBG.png);
+	background-repeat : no-repeat;
+}
+.Market_Urmia
+{
+	width : 247px;
+	height : 239px;
+	display : inline-block;
+	background-image : url(Market_Urmia.png);
+	position : absolute;
+	left : 85px;
+	top : 0px;
+}
+.Market_Piranshahr
+{
+	width : 189px;
+	height : 189px;
+	display : inline-block;
+	background-image : url(Market_Piranshahr.png);
+	position : absolute;
+	left : 128px;
+	top : 289px;
+}
+.Market_Baneh
+{
+	width : 203px;
+	height : 172px;
+	display : inline-block;
+	background-image : url(Market_Baneh.png);
+	position : absolute;
+	left : 321px;
+	bottom : 0px;
+}

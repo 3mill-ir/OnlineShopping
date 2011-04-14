@@ -1,0 +1,206 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Views_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="fa" />
+    <link href="../Content/Themes/Default/Default.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src='<%= Repository.ToHtmlUrl("~/Scripts/jquery-1.4.1.js") %>'></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="MainDiv">
+        <div class="HeaderDiv">
+            <asp:HyperLink ID="HyperLink7" runat="server" CssClass="Title" NavigateUrl="~/Default.aspx"></asp:HyperLink>
+            <% if (!HttpContext.Current.User.Identity.IsAuthenticated)
+               { %>
+               <div class="SignInDiv">
+                    خوش آمدید!
+                   <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Views/Login.aspx" CssClass="Link">وارد شوید</asp:HyperLink>
+                   
+               </div>
+            <% }
+               else
+               { %>
+                <div class="SignInDiv">
+                    <asp:LoginStatus ID="LoginStatus1" runat="server" LoginText="ورود" LogoutText="خروج از سیستم" CssClass="Link"/>
+               </div>
+            <% } %>
+            <% if (HttpContext.Current.User.IsInRole(MyRoles.Admin))
+               { %>
+                <div id="TopMenu" class="TopMenu">
+                    <table border="0" cellspacing="0" cellpadding="0" class="TopMenuLinksTable">
+                        <tr>
+                            <td class="Separator TopMenuTD First">
+                                <asp:HyperLink ID="HyperLink4" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Admin/Materials.aspx">اجنـاس</asp:HyperLink>
+                            </td>
+                            <td class="Separator TopMenuTD">
+                                <asp:HyperLink ID="HyperLink8" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Admin/Shops.aspx">فروشگـاهها</asp:HyperLink>
+                            </td>
+                            <td class="Separator TopMenuTD">
+                                <asp:HyperLink ID="HyperLink5" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Admin/Orders.aspx">سفـارشات</asp:HyperLink>
+                            </td>
+                            <td class="Separator TopMenuTD">
+                                <asp:HyperLink ID="HyperLink10" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Admin/SlidingImages.aspx">تصـاویر متحرک</asp:HyperLink>
+                            </td>
+                            <td class="Separator TopMenuTD">
+                                <asp:HyperLink ID="HyperLink11" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Admin/MaterialTypes.aspx">اطلاعات پایه</asp:HyperLink>
+                            </td>
+                            <td class="Separator TopMenuTD">
+                                <asp:HyperLink ID="HyperLink17" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Admin/Statistics.aspx">آمـار و ارقـام</asp:HyperLink>
+                            </td>
+                            <td class="TopMenuTD" style="padding-left : 0px;">
+                                <asp:HyperLink ID="HyperLink6" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Admin/Users.aspx">کاربـران</asp:HyperLink>
+                            </td>
+                         </tr>
+                    </table>
+                </div>
+            <% }
+               else if (HttpContext.Current.User.IsInRole(MyRoles.Member))
+               {  %>
+               <div class="TopMenu">
+                    <table border="0" cellspacing="0" cellpadding="0" class="TopMenuLinksTable">
+                        <tr>
+                            <td id="menuItem_Messages" class="Separator TopMenuTD First" style="cursor : pointer;">
+                                <table border="0" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td>
+                                            <a class="TopMenuItem" style="padding-left : 0px;">پیـام هـا</a>
+                                        </td>
+                                        <td style="padding-right: 2px; padding-left : 7px;">
+                                            <div class="TopMenuItem_Arrow"></div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td class="Separator TopMenuTD">
+                                <asp:HyperLink ID="HyperLink15" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Members/Orders.aspx">سفـارشات</asp:HyperLink>
+                            </td>
+                            <td class="Separator TopMenuTD">
+                                <asp:HyperLink ID="HyperLink13" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Members/Statistics.aspx">آمـار و ارقـام</asp:HyperLink>
+                            </td>
+                            <td class="Separator TopMenuTD" style="padding-left : 0px;">
+                                <asp:HyperLink ID="HyperLink18" runat="server" CssClass="TopMenuItem" NavigateUrl="~/Views/Members/Profile.aspx">اطلاعـات کاربـری</asp:HyperLink>
+                            </td>
+                            <td class="TopMenuTD" style="padding-left : 0px;">
+                                <asp:HyperLink ID="HyperLink19" runat="server" CssClass="TopMenuItem" onclick="return alert('این امکان در دست طراحی می باشد');">ارتبـاط با مـا</asp:HyperLink>
+                            </td>
+                         </tr>
+                    </table>
+                    <div id="submenuItem_messages" class="TopMenu_PopupDiv">
+                        <asp:HyperLink ID="HyperLink14" CssClass="TopMenu_SubItem" runat="server" NavigateUrl="~/Views/Members/Messages.aspx?show=inbox">صنـدوق ورودی</asp:HyperLink>
+                        <asp:HyperLink ID="HyperLink16" CssClass="TopMenu_SubItem" runat="server" NavigateUrl="~/Views/Members/Messages.aspx?show=sentbox">موارد ارسـال شده</asp:HyperLink>
+                    </div>
+                    <script type="text/javascript">
+                        $(function() {
+                            $('#menuItem_Messages').mouseenter(function() {
+                                $(this).css('background-color', '#ededee');
+                            });
+                            $('#menuItem_Messages').mouseleave(function() {
+                                $(this).css('background-color', '');
+                            });
+                            $('#menuItem_Messages').click(function() {
+                                var item = $(this);
+                                var popup = $('#submenuItem_messages');
+                                var p = item.position();
+                                popup.css('top', p.top + item.height() + 'px').css('left', p.left - (popup.width() / 2) + (item.width() / 2) + 'px').slideToggle('fast');
+                            });
+                        });
+                    </script>
+                </div>
+            <% }
+               else if (!HttpContext.Current.User.Identity.IsAuthenticated)
+               { %>
+               
+            <% } %>
+        </div>
+        <div id="SearchDiv">
+            <table border="0" cellpadding="0" cellspacing="0" style="float : left; margin : 7px 0px 0px 0px;">
+                <tr>
+                    <td>
+                        <asp:HyperLink ID="HyperLink12" runat="server" CssClass="ViewCompareCart" NavigateUrl="~/Views/CompareMaterials.aspx"></asp:HyperLink>
+                    </td>
+                    <td style="padding-right : 10px;">
+                        <asp:HyperLink ID="HyperLink9" runat="server" NavigateUrl="~/Views/ShoppingCart.aspx" CssClass="ViewCart"></asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+            <table border="0" cellpadding="3" cellspacing="0">
+                <tr>
+                    <td>
+                        <asp:TextBox ID="tb_Search" runat="server" CssClass="TextBoxes" Width="275px"></asp:TextBox>
+                        <asp:CustomValidator ID="CustomValidator1" runat="server" ValidationGroup="Search" EnableClientScript="true"
+                            ErrorMessage="" ControlToValidate="tb_Search" ClientValidationFunction="ValidateTextBox" 
+                            ValidateEmptyText="true">
+                        </asp:CustomValidator>
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="cmb_Categoriesssss" runat="server" CssClass="ComboBoxes" Width="180px">
+                            <asp:ListItem></asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:HiddenField ID="hidden_CategoryID" runat="server" Value="0"/>
+                    </td>
+                    <td>
+                        <asp:LinkButton ID="LinkButton1" runat="server" CssClass="SearchButton" OnClick="btn_Search_Clicked" ValidationGroup="Search"></asp:LinkButton>
+                    </td>
+                    <td>
+                        <asp:HyperLink ID="HyperLink1" runat="server" CssClass="Link">جستجوی پیشرفته</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="ContentPlace">
+            <div id="PopupMenu" class="PopupMenu">
+            </div>
+            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td valign="top" class="RightBarMenuTD">
+                        <div id="MenuDiv">
+                            <%= GetMenu() %>
+                        </div>
+                        <div>
+                            <asp:ContentPlaceHolder id="ContentPlaceHolder_UnderMenu" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </td>
+                    <td valign="top" class="LeftPart">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder_Foot" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div id="Footer" style="margin-top : 10px;">
+            کاری از :
+            <a class="Link" target="_blank">گروه فناوری اطلاعات رامان</a>
+        </div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder_UnderFooter" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+    <script type="text/javascript">
+        $(function() {
+            $('[id*=cmb_Categoriesssss]').change(function() {
+                var categoryId = $(this).val();
+                //
+                var hidden = $('[id*=hidden_CategoryID]');
+                hidden.val(categoryId);
+            });
+        });
+        function ValidateTextBox(source, args) {
+            var tb_Search = $("[id*=tb_Search]");
+            var is_valid = tb_Search.val() != "";
+            tb_Search.css("background-color", is_valid ? "White" : "#fcd4d2");
+            args.IsValid = is_valid;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>slideGallery 1.3</title>
+	<link media="all" type="text/css" rel="stylesheet" href="../Assets/css/all.css" />
+	<script type="text/javascript" src="../Assets/js/mootools-core-1.3-full-compat-yc.js"></script>
+	<script type="text/javascript" src="../Source/slideGallery.js"></script>
+	<script type="text/javascript">
+		window.addEvent("domready", function() {
+			/* Example 1 */
+			var gallery1 = new slideGallery($$(".gallery1"), {
+				steps: 3,
+				mode: "callback",
+				autoplay: true,
+				paging: true,
+				pagingHolder: ".paging",
+				onStart: function() {
+					this.gallery.getElement(".info").set("html", parseInt(this.current+1) + "-" + parseInt(this.visible+this.current) + " from " + this.items.length);
+				},
+				onPlay: function() { this.fireEvent("start"); }
+			});
+			/* Example 2 */
+			var gallery2 = new slideGallery($$(".gallery2"), {
+				steps: 2,
+				mode: "circle",
+				random: true,
+				autoplayOpposite: true,
+				stop: ".stop",
+				start: ".start",
+				duration: 4000,
+				speed: 700
+			});
+			/* Example 3 */
+			var gallery3 = new slideGallery($$(".gallery3"), {
+				steps: 1,
+				mode: "line",
+				direction: "vertical"
+			});
+			/* Example 4 */
+			var gallery4 = new slideGallery($$(".gallery4"), {
+				steps: 1,
+				current: 5,
+				direction: "vertical",
+				paging: true,
+				autoplay: true,
+				duration: 3000,
+				transition: Fx.Transitions.Bounce.easeOut,
+				onStart: function() {
+					this.gallery.getElement(".info").set("html", this.items[this.current].getElement("img").title);
+				},
+				onPlay: function() { this.fireEvent("start"); }
+			});
+			/* Example 5 */
+			var gallery5 = new fadeGallery($$(".gallery5"), {
+				speed: 800,
+				paging: true,
+				pagingEvent: "mouseenter",
+				autoplay: true,
+				duration: 2000,
+				onStart: function() {
+					this.gallery.getElement(".info").set("html", parseInt(this.current+1) + " from " + this.items.length);
+				},
+				onPlay: function() { this.fireEvent("start"); }
+			});
+			/* Example 6 */
+			var thumns = $$(".thumbs li a");
+			var gallery6 = new fadeGallery($$(".gallery6"), {
+				speed: 500,
+				autoplay: true,
+				duration: 2000,
+				onStart: function() {
+					thumns.removeClass("active");
+					thumns[this.current].addClass("active");
+				},
+				onPlay: function() { this.fireEvent("start");	}
+			});
+			thumns.each(function(el, i) {
+				el.addEvent("click", function() {
+					thumns.removeClass("active");
+					this.addClass("active");
+					gallery6.current = i;
+					gallery6.play(true);
+					return false;
+				});
+			});
+			var buttonPanel = gallery6.holder.getElement(".control");
+			gallery6.holder.addEvent("mouseenter", function() {
+				buttonPanel.tween("top", 0);
+				gallery6.prev.tween("left", 10);
+				gallery6.next.tween("right", 10);
+			});
+			gallery6.holder.addEvent("mouseleave", function() {
+				buttonPanel.tween("top", -40);
+				gallery6.prev.tween("left", -50);
+				gallery6.next.tween("right", -50);
+			});
+			
+			/* Examples panel */
+			var panel = true;
+			$$(".toggler").addEvent("click", function() {
+				if(panel) {
+					this.set("text", "show").getNext().setStyle("display", "none");
+					panel = false;
+				}
+				else {
+					this.set("text", "hide").getNext().setStyle("display", "block");
+					panel = true;
+				}
+				return false;
+			});
+		});
+	</script>
+	<!--[if lt IE 7]><link rel="stylesheet" type="text/css" href="../Assets/css/lt7.css" media="screen"/><![endif]-->
+</head>
+<body>
+	<div class="gallery gallery1">
+		<div class="holder">
+			<ul>
+				<li><img src="../Assets/images/img1.jpg" alt="image" width="240" height="180" /></li>
+				<li><img src="../Assets/images/img2.jpg" alt="image" width="240" height="180" /></li>
+				<li><img src="../Assets/images/img3.jpg" alt="image" width="240" height="180" /></li>
+				<li><img src="../Assets/images/img4.jpg" alt="image" width="240" height="180" /></li>
+				<li><img src="../Assets/images/img5.jpg" alt="image" width="240" height="180" /></li>
+			</ul>
+		</div>
+		<div>
+			<a href="#" class="prev">prev</a>
+			<a href="#" class="next">next</a>
+		</div>
+	</div>
+</body>
+</html>
